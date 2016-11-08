@@ -13,6 +13,7 @@ module.exports = function(d3) {
 
   return {
     adx: require('./adx')(accessor.adx, plot, plotMixin),
+    area: require('./area')(accessor.value, plot, plotMixin),
     aroon: require('./aroon')(accessor.aroon, plot, plotMixin),
     atr: line(accessor.value, plot, plotMixin),
     atrtrailingstop: require('./atrtrailingstop')(accessor.atrtrailingstop, plot, plotMixin),
@@ -24,6 +25,7 @@ module.exports = function(d3) {
     ema: line(accessor.value, plot, plotMixin),
     heikinashi: candlestick,
     ichimoku: require('./ichimoku')(d3.area, d3.curveMonotoneX, accessor.ichimoku, plot, plotMixin),
+    line: line(accessor.value, plot, plotMixin),
     macd: require('./macd')(accessor.macd, plot, plotMixin),
     momentum: line(accessor.value, plot, plotMixin, true),
     moneyflow: line(accessor.value, plot, plotMixin, true),
