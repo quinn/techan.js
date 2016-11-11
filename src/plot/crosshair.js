@@ -127,6 +127,8 @@ module.exports = function(d3_select, d3_event, d3_mouse, d3_dispatch, accessor_c
         if(p.accessor.yv(d) === null) return null;
         var value = p.yScale(p.accessor.yv(d));
         if(isNaN(value)) return null;
+        else value -= 0.5;
+
         return 'M ' + range[0] + ' ' + value + ' L ' + range[range.length-1] + ' ' + value;
       };
     }
