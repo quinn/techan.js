@@ -23,15 +23,16 @@ module.exports = function(grunt) {
 
     clean: {
       dist: 'dist',
-      build: 'build'
+      build: 'build',
+      version: 'src/version'
     },
 
     filegen: {
       version: {
         options: {
-          content: "'use strict';module.exports='<%= pkg.version %>';"
+          content: "'use strict';module.exports='<%= pkg.version %>';\n"
         },
-        dest: '<%= clean.build %>/version.js'
+        dest: '<%= clean.version %>/index.js'
       }
     },
 
