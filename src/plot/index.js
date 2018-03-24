@@ -43,6 +43,7 @@ export const plot = function(d3) {
 
   return {
     adx: adx(accessor.adx, plot, plotMixin),
+    area: require('./area')(accessor.value, plot, plotMixin),
     aroon: aroon(accessor.aroon, plot, plotMixin),
     atr: line(accessor.value, plot, plotMixin),
     atrtrailingstop: atrtrailingstop(accessor.atrtrailingstop, plot, plotMixin),
@@ -54,6 +55,7 @@ export const plot = function(d3) {
     ema: line(accessor.value, plot, plotMixin),
     heikinashi: candlestick,
     ichimoku: ichimoku(d3.area, d3.curveMonotoneX, accessor.ichimoku, plot, plotMixin),
+    line: line(accessor.value, plot, plotMixin),
     macd: macd(accessor.macd, plot, plotMixin),
     momentum: line(accessor.value, plot, plotMixin, true),
     moneyflow: line(accessor.value, plot, plotMixin, true),

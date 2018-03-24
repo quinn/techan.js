@@ -71,7 +71,9 @@ export const axisannotation = function(d3_svg_axis, d3_scale_linear, accessor_va
 function refresh(selection, accessor, axis, orient, format, height, width, point, translate) {
   var neg = orient === 'left' || orient === 'top' ? -1 : 1;
 
-  selection.attr('transform', 'translate(' + translate[0] + ',' + translate[1] + ')');
+  selection.attr('class', function(d){
+   return 'data marker-annotation' + (d.type ? ' marker-' + d.type : '');
+   }).attr('transform', 'translate(' + translate[0] + ',' + translate[1] + ')');
   selection.select('path').attr('d', backgroundPath(accessor, axis, orient, height, width, point, neg));
   selection.select('text').text(textValue(accessor, format)).call(textAttributes, accessor, axis, orient, neg);
 }
