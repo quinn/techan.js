@@ -73,7 +73,7 @@ function refresh(selection, accessor, axis, orient, format, height, width, point
 
   selection.attr('class', function(d){
    return 'data marker-annotation' + (d.type ? ' marker-' + d.type : '');
-   }).attr('transform', 'translate(' + translate[0] + ',' + translate[1] + ')');
+   }).attr('transform', 'translate(' + translate[0] + ',' + (translate[1] - 0.5) + ')');
   selection.select('path').attr('d', backgroundPath(accessor, axis, orient, height, width, point, neg));
   selection.select('text').text(textValue(accessor, format)).call(textAttributes, accessor, axis, orient, neg);
 }

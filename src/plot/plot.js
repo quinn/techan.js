@@ -244,10 +244,11 @@ export const plot = function(d3_svg_line, d3_svg_area, d3_line_interpolate, d3_s
         if(!d.length) return null;
 
         var firstDatum = d[0],
-            lastDatum = d[d.length-1];
+            lastDatum = d[d.length-1],
+            yValue = Math.floor(y(accessor_value(firstDatum))) + 0.5;
 
-        return 'M ' + x(accessor_date(firstDatum)) + ' ' + y(accessor_value(firstDatum)) +
-          ' L ' + x(accessor_date(lastDatum)) + ' ' + y(accessor_value(lastDatum));
+        return 'M ' + x(accessor_date(firstDatum)) + ' ' + yValue +
+          ' L ' + x(accessor_date(lastDatum)) + ' ' + yValue;
       };
     },
 
