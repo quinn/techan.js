@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(indicatorMixin, accessor_ohlc, indicator_atr) {  // Injected dependencies
+export const atrtrailingstop = function(indicatorMixin, accessor_ohlc, indicator_atr) {  // Injected dependencies
   return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         multiplier = 3,

@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const stochastic = function() {
   var date = function(d) { return d.date; },
       stochasticK = function(d) { return d.stochasticK; },
       stochasticD = function(d) { return d.stochasticD; },

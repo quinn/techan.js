@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const rsi = function() {
   var date = function(d) { return d.date; },
       rsi = function(d) { return d.rsi; },
       overbought = function(d) { return d.overbought; },

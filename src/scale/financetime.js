@@ -1,11 +1,9 @@
-'use strict';
-
 /*
  Finance time scale which is not necessarily continuous, is required to be plot continuous. Finance scale
  generally contains data points on days where a market is open but no points when closed, such as weekday
  and weekends respectively. When plot, is done so without weekend gaps.
  */
-module.exports = function(d3_scale_linear, d3_time, d3_bisect, techan_util_rebindCallback, scale_widen, techan_scale_zoomable) {  // Injected dependencies
+export const financetime = function(d3_scale_linear, d3_time, d3_bisect, techan_util_rebindCallback, scale_widen, techan_scale_zoomable) {  // Injected dependencies
   function financetime(tickMethods, genericFormat, index, domain, padding, outerPadding, zoomLimit, closestTicks, zoomable) {
     var dateIndexMap,
         tickState = { tickFormat: tickMethods.daily[tickMethods.daily.length-1][2] },
@@ -303,7 +301,9 @@ module.exports = function(d3_scale_linear, d3_time, d3_bisect, techan_util_rebin
         [d3_time.timeFormat('%Y'), function() { return true; }]
       ]),
       intradayFormat = d3_v3_multi_shim([
-        [d3_time.timeFormat(':%S'), function(d) { return d.getSeconds(); }],
+        [d3_time.timeFormat(':%S'), function(d) { 
+          return d.getSeconds(); 
+        }],
         [d3_time.timeFormat('%I:%M'), function(d) { return d.getMinutes(); }],
         [d3_time.timeFormat('%I %p'), function () { return true; }]
       ]),

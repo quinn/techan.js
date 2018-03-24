@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(indicatorMixin, accessor_ohlc) {  // Injected dependencies
+export const vwap = function(indicatorMixin, accessor_ohlc) {  // Injected dependencies
   return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         cumul_total,

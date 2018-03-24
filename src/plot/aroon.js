@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(accessor_aroon, plot, plotMixin) {  // Injected dependencies
+export const aroon = function(accessor_aroon, plot, plotMixin) {  // Injected dependencies
   return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         oscLine = plot.pathLine(),

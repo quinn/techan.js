@@ -1,9 +1,7 @@
-'use strict';
-
 /**
  * TODO Refactor this to techan.plot.annotation.axis()?
  */
-module.exports = function(d3_svg_axis, d3_scale_linear, accessor_value, plot, plotMixin) {  // Injected dependencies
+export const axisannotation = function(d3_svg_axis, d3_scale_linear, accessor_value, plot, plotMixin) {  // Injected dependencies
   return function() { // Closure function
     var p = {},
         axis = d3_svg_axis(d3_scale_linear()),
@@ -107,6 +105,7 @@ function textAttributes(text, accessor, axis, orient, neg) {
       break;
     case 'top':
     case 'bottom':
+    default:
       text.attr('x', textPosition(accessor, scale))
           .attr('y', neg*(Math.max(axis.tickSizeInner(), 0) + axis.tickPadding()))
           .attr('dy', neg < 0 ? '0em' : '.72em')

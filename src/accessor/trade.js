@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const trade = function() {
   var date = function(d) { return d.date; },
       type = function(d) { return d.type; },
       price = function(d) { return d.price; };

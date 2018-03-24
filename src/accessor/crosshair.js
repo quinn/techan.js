@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const crosshair = function() {
   /**
    * Supports getter and setter. Watch out if used in d3 and the second parameter is an index!!
    * This approach needs further thought.

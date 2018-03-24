@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const trendline = function() {
   var startDate = function(d, _) {
         if(arguments.length < 2) return d.start.date;
         d.start.date = _;

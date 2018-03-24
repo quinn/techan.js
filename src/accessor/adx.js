@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const adx = function() {
   var date = function(d) { return d.date; },
       adx = function(d) { return d.adx; },
       plusDi = function(d) { return d.plusDi; },

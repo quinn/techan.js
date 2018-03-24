@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(accessor_value, plot, plotMixin, showZero) {  // Injected dependencies
+export const line = function(accessor_value, plot, plotMixin, showZero) {  // Injected dependencies
   showZero = showZero || false;
 
   return function() { // Closure function

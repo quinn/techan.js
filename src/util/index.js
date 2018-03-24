@@ -1,8 +1,8 @@
-'use strict';
+import circularbuffer from './circularbuffer';
 
-module.exports = function() {
+export const util = function() {
   return {
-    circularbuffer: require('./circularbuffer'),
+    circularbuffer: circularbuffer,
 
     rebindCallback: rebindCallback,
 

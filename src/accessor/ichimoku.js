@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const ichimoku = function() {
   var date = function(d) { return d.date; },
       tenkanSen = function(d) { return d.tenkanSen; },                  // Conversion line
       kijunSen = function(d) { return d.kijunSen; },                    // Base Line

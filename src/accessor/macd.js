@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const macd = function() {
   var date = function(d) { return d.date; },
       macd = function(d) { return d.macd; },
       zero = function(d) { return d.zero; },

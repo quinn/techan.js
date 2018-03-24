@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(accessor_rsi, plot, plotMixin) {  // Injected dependencies
+export const rsi = function(accessor_rsi, plot, plotMixin) {  // Injected dependencies
   return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         rsiLine = plot.pathLine();

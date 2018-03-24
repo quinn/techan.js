@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const bollinger = function() {
   var date = function(d) { return d.date; },
       middle = function(d) { return d.middleBand; },
       upper = function(d) { return d.upperBand; },

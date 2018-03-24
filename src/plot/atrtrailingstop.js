@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(accessor_atrtrailingstop, plot, plotMixin) {  // Injected dependencies
+export const atrtrailingstop = function(accessor_atrtrailingstop, plot, plotMixin) {  // Injected dependencies
   return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         upLine = plot.pathLine(),

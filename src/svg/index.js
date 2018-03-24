@@ -1,7 +1,9 @@
-'use strict';
 
-module.exports = function(d3) {
+import { arrow as _arrow } from './arrow';
+import { util } from '../util';
+
+export const svg = function(d3) {
   return {
-    arrow: require('./arrow')(require('../util')().functor)
+    arrow: _arrow(util().functor)()
   };
 };

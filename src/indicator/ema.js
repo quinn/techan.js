@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(indicatorMixin, accessor_ohlc, alpha_init) {  // Injected dependencies
+export const ema_init = function(indicatorMixin, accessor_ohlc, alpha_init) {  // Injected dependencies
   return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         previous,

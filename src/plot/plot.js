@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(d3_svg_line, d3_svg_area, d3_line_interpolate, d3_select) {
+export const plot = function(d3_svg_line, d3_svg_area, d3_line_interpolate, d3_select) {
   var DataSelector = function(mapper) {
     var key,
         scope,
@@ -117,7 +115,10 @@ module.exports = function(d3_svg_line, d3_svg_area, d3_line_interpolate, d3_sele
   }
 
   function appendPlotTypePath(g, data, plotNames, direction) {
-    g.selectAll('path.' + arrayJoin(plotNames, '.') + '.' + direction).data(function(d) { return [d.filter(data)]; })
+    g.selectAll('path.' + arrayJoin(plotNames, '.') + '.' + direction)
+      .data(function(d) { 
+        return [d.filter(data)]; 
+      })
       .enter().append('path').attr('class', arrayJoin(plotNames, ' ') + ' ' + direction);
   }
 

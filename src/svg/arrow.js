@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(d3_functor) {  // Injected dependencies
+export const arrow = function(d3_functor) {  // Injected dependencies
   return function() {
     var fx = d3_functor(0),
         fy = d3_functor(0),

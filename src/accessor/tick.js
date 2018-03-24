@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const tick = function() {
   var date = function(d) { return d.date; },
       high = function(d) { return d.high; },
       low = function(d) { return d.low; },

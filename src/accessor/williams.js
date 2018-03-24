@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const williams = function() {
   var date = function(d) { return d.date; },
       williams = function(d) { return d.williams; };
 

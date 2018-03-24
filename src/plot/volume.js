@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function(accessor_volume, plot, plotMixin) {  // Injected dependencies
+export const volume = function(accessor_volume, plot, plotMixin) {  // Injected dependencies
   return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         volumeGenerator;

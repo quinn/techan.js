@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const value = function() {
   var date = function(d) { return d.date; },
       /**
        * Supports getter and setter

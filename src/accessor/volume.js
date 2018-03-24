@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const volume = function() {
   var date = function(d) { return d.date; },
       volume = function(d) { return d.volume; };
 

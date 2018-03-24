@@ -1,19 +1,16 @@
-'use strict';
+import * as d3 from 'd3';
 
-var _d3;
+import { indicators } from './indicator';
+import { accessors } from './accessor';
+import { svg } from './svg';
+import { plot } from './plot';
+import { scale } from './scale';
 
-// If running in browser (window !undefined), assume d3 available
-if('undefined' != typeof window) _d3 = window.d3;
-else if('object' == typeof module) _d3 = require('d3'); // else we're in the only other supported mode: v8/node
-else throw "Unsupported runtime environment: Could not find d3. Ensure defined globally on window, or available as dependency.";
-
-module.exports = (function(d3) {
-  return {
-    version: require('../build/version'),
-    accessor: require('./accessor')(),
-    indicator: require('./indicator')(d3),
-    plot: require('./plot')(d3),
-    scale: require('./scale')(d3),
-    svg: require('./svg')(d3)
-  };
-})(_d3);
+export const techan = {
+//    version: require('../build/version'),
+    accessor: accessors(),
+    indicator: indicators(d3),
+    plot: plot(d3),
+    scale: scale(d3),
+    svg: svg(d3)
+};

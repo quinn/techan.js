@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const ohlc = function() {
   var date = function(d) { return d.date; },
       open = function(d) { return d.open; },
       high = function(d) { return d.high; },

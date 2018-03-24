@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const indicatormixin = function() {
   return function(source, priv) {
     var indicatorMixin = {};
 

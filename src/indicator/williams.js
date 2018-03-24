@@ -1,7 +1,4 @@
-'use strict';
-
-module.exports = function(indicatorMixin, accessor_ohlc) {  // Injected dependencies
-  return function() { // Closure function
+export const williams = function(indicatorMixin, accessor_ohlc) {  // Injected dependencies
     var p = {},  // Container for private, direct access mixed in variables
         overbought = 80,
         middle = 50,
@@ -53,7 +50,6 @@ module.exports = function(indicatorMixin, accessor_ohlc) {  // Injected dependen
     indicatorMixin(indicator, p).accessor(accessor_ohlc()).period(20);
 
     return indicator;
-  };
 };
 
 function datum(date, williams, middle, overbought, oversold) {

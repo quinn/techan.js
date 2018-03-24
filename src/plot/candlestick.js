@@ -1,7 +1,5 @@
-'use strict';
-
-module.exports = function(d3_scale_linear, d3_extent, accessor_ohlc, plot, plotMixin) {  // Injected dependencies
-  return function() { // Closure constructor
+export const candlestick = function(d3_scale_linear, d3_extent, accessor_ohlc, plot, plotMixin) {  // Injected dependencies
+  return function() { // Closure function
     var p = {},  // Container for private, direct access mixed in variables
         bodyPathGenerator,
         wickGenerator,

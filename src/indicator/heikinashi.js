@@ -1,7 +1,6 @@
-'use strict';
-
-module.exports = function(indicatorMixin, accessor_ohlc, min, max) {  // Injected dependencies
-  return function() { // Closure function
+export const heikinashi = function(indicatorMixin, accessor_ohlc, min, max) {  // Injected dependencies
+  //Injected dependencies
+  return function() { // Closure function  
     var p = {};  // Container for private, direct access mixed in variables
 
     function indicator(data) {

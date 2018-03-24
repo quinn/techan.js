@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const atrtrailingstop = function() {
   var date = function(d) { return d.date; },
       up = function(d) { return d.up; },
       down = function(d) { return d.down; };

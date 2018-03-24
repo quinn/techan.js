@@ -1,10 +1,13 @@
-'use strict';
+import { util as _util } from "../util";
+import { zoomable as _zoomable } from "./zoomable";
+import { accessors as _accessors } from "../accessor";
+import { financetime as _financetime } from "./financetime";
 
-module.exports = function(d3) {
-  var zoomable = require('./zoomable')(),
-      util = require('../util')(),
-      accessors = require('../accessor')(),
-      financetime = require('./financetime')(d3.scaleLinear, d3, d3.bisect, util.rebindCallback, widen, zoomable);
+export const scale = function(d3) {
+  var zoomable = _zoomable(),
+      util = _util(),
+      accessors = _accessors(),
+      financetime = _financetime(d3.scaleLinear, d3, d3.bisect, util.rebindCallback, widen, zoomable);
 
   function ohlc(data, accessor) {
     accessor = accessor || accessors.ohlc();

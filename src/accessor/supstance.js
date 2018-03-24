@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = function() {
+export const supstance = function() {
   var start = function(d) { return d.start; },
       end = function(d) { return d.end; },
     /**
