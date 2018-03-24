@@ -5,7 +5,7 @@
 *.iml
 bower_components
 build
-dist/*.zip
+dist
 node_modules
 test/html/gist
 npm-debug.log
