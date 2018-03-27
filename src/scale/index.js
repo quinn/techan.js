@@ -4,15 +4,21 @@ import { accessors as _accessors } from "../accessor";
 import { financetime as _financetime } from "./financetime";
 
 export const scale = function(d3) {
-  var zoomable = _zoomable(),
-      util = _util(),
-      accessors = _accessors(),
+  var zoomable    = _zoomable(),
+      util        = _util(),
+      accessors   = _accessors(),
       financetime = _financetime(d3.scaleLinear, d3, d3.bisect, util.rebindCallback, widen, zoomable);
 
   function ohlc(data, accessor) {
     accessor = accessor || accessors.ohlc();
+
+    var domain = [
+      d3.min(data.map(accessor.low())),
+      d3.max(data.map(accessor.high()))
+    ]
+
     return d3.scaleLinear()
-      .domain([d3.min(data.map(accessor.low())), d3.max(data.map(accessor.high()))].map(widen(0.02)));
+      .domain(domain.map(widen(0.02)));
   }
 
   function pathWithValueAccessor(data, accessor, widening) {
